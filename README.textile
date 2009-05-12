@@ -10,7 +10,7 @@ h2. Examples
 
 * "Simple example using images and DIVs":http://nathansearles.com/loopedslider/example-1.html
 * "Simple text and auto height example using LIs":http://nathansearles.com/loopedslider/example-2.html
-* "Multiple sliders and auto play example":http://nathansearles.com/loopedslider/example-2.html
+* "Multiple sliders and auto play example":http://nathansearles.com/loopedslider/example-3.html
 * "Fancy styled example":http://nathansearles.com/loopedslider/example-4.html
 
 h2. Markup
