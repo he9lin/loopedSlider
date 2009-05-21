@@ -1,7 +1,7 @@
 /*
  * 	loopedSlider 0.5.1 - jQuery plugin
  *	written by Nathan Searles	
- *	http://code.google.com/p/loopedslider/
+ *	http://nathansearles.com/loopedslider/
  *
  *	Copyright (c) 2009 Nathan Searles (http://nathansearles.com/)
  *	Dual licensed under the MIT (MIT-LICENSE.txt)

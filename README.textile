@@ -4,7 +4,9 @@ loopedSlider is a plugin made for jQuery that solves a simple problem, the loopi
 
 h2. Info
 
-Developed by Nathan Searles, "http://nathansearles.com":http://nathansearles.com
+Developed by "Nathan Searles":mailto:nsearles@gmail.com, "http://nathansearles.com":http://nathansearles.com
+
+For updates, follow Nathan Searles on "Twitter":http://twitter.com/nathansearles
 
 h2. Examples
 
