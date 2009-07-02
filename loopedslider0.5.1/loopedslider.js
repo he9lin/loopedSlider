@@ -1,5 +1,5 @@
 /*
- * 	loopedSlider 0.5.1 - jQuery plugin
+ * 	loopedSlider 0.5.2 - jQuery plugin
  *	written by Nathan Searles	
  *	http://nathansearles.com/loopedslider/
  *
@@ -44,7 +44,8 @@
 		slides: '.slides',
 		pagination: '.pagination',
 		containerClick: true, // Click container for next slide
-		autoStart: 0, // Set to positive number for auto interval and interval time
+		autoStart: 0, // Set to positive number for auto start and interval time
+		restart: 0, // Set to positive number for restart and restart time
 		slidespeed: 300, // Speed of slide animation
 		fadespeed: 300, // Speed of fade animation
 		autoHeight: false // Set to positive number for auto height and animation speed
@@ -62,6 +63,8 @@
 		var p = 0;
 		var u = false;
 		var n = 0;
+		var interval=0;
+		var restart=0;
 		
 		$(o.slides,obj).css({width:(s*w)});
 		
@@ -83,14 +86,18 @@
 		$('.next',obj).click(function(){
 			if(u===false) {
 				animate('next',true);
-				if(o.autoStart){clearInterval(sliderIntervalID);}
+				if(o.autoStart){
+					if (o.restart) {autoStart();}
+					else {clearInterval(sliderIntervalID);}
+				}
 			} return false;
 		});
 		
 		$('.previous',obj).click(function(){
 			if(u===false) {	
 				animate('prev',true);
-				if(o.autoStart){clearInterval(sliderIntervalID);}
+				if (o.restart) {autoStart();}
+				else {clearInterval(sliderIntervalID);}
 			} return false;
 		});
 		
@@ -98,7 +105,8 @@
 			$(o.container ,obj).click(function(){
 				if(u===false) {
 					animate('next',true);
-					if(o.autoStart){clearInterval(sliderIntervalID);}
+					if (o.restart) {autoStart();}
+					else {clearInterval(sliderIntervalID);}
 				} return false;
 			});
 		}
@@ -110,14 +118,31 @@
 				$(pagination,obj).parent().siblings().removeClass('active');
 				$(this).parent().addClass('active');
 				animate('fade',t);
-				if(o.autoStart){clearInterval(sliderIntervalID);}
+				if (o.restart) {autoStart();}
+				else {clearInterval(sliderIntervalID);}
 			} return false;
 		});
-		
+	
 		if (o.autoStart) {
 			sliderIntervalID = setInterval(function(){
 				if(u===false) {animate('next',true);}
 			}, o.autoStart);
+			function autoStart() {
+				if (o.restart) {
+				clearInterval(sliderIntervalID);
+				clearInterval(interval);
+				clearTimeout(restart);
+					restart = setTimeout(function() {
+						interval = setInterval(	function(){
+							animate('next',true);
+						},o.autoStart);
+					},o.restart);
+				} else {
+					sliderIntervalID = setInterval(function(){
+						if(u===false) {animate('next',true);}
+					},o.autoStart);
+				}
+			};
 		}
 		
 		function current(t) {

@@ -12,8 +12,8 @@ h2. Examples
 
 * "Simple example using images and DIVs":http://nathansearles.com/loopedslider/example-1.html
 * "Simple text and auto height example using LIs":http://nathansearles.com/loopedslider/example-2.html
-* "Multiple sliders and auto play example":http://nathansearles.com/loopedslider/example-3.html
-* "Fancy styled example":http://nathansearles.com/loopedslider/example-4.html
+* "Multiple sliders and auto play with auto restart":http://nathansearles.com/loopedslider/example-3.html
+* "Styled example":http://nathansearles.com/loopedslider/example-4.html
 
 h2. Markup
 
@@ -56,7 +56,22 @@ h2. Initialize
 </script>
 </pre>
 
+h2. Options
+
+<pre>
+container: '.container', // Class or ID of main container
+slides: '.slides', // Class or ID of slide container
+pagination: '.pagination', // Class or ID of pagination container
+containerClick: true, // Click container for next slide
+autoStart: 0, // Set to positive number for auto start and interval time
+restart: 0, // Set to positive number for restart and restart interval
+slidespeed: 300, // Speed of slide animation
+fadespeed: 300, // Speed of fade animation
+autoHeight: false // Set to positive number for auto height and animation speed
+</pre>
+
 h2. Changelog
 
+* 0.5.2 - Added restart auto start after it's been stopped
 * 0.5.1 - Fixed minor bug, container option not properly set
 * 0.5 - Initial release
