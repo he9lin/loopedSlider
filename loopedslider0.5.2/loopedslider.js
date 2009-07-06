@@ -1,5 +1,5 @@
 /*
- * 	loopedSlider 0.5.2 - jQuery plugin
+ * 	loopedSlider 0.5.3 - jQuery plugin
  *	written by Nathan Searles	
  *	http://nathansearles.com/loopedslider/
  *
@@ -96,8 +96,10 @@
 		$('.previous',obj).click(function(){
 			if(u===false) {	
 				animate('prev',true);
-				if (o.restart) {autoStart();}
-				else {clearInterval(sliderIntervalID);}
+				if(o.autoStart){
+					if (o.restart) {autoStart();}
+					else {clearInterval(sliderIntervalID);}
+				}
 			} return false;
 		});
 		
@@ -105,8 +107,10 @@
 			$(o.container ,obj).click(function(){
 				if(u===false) {
 					animate('next',true);
-					if (o.restart) {autoStart();}
-					else {clearInterval(sliderIntervalID);}
+					if(o.autoStart){
+						if (o.restart) {autoStart();}
+						else {clearInterval(sliderIntervalID);}
+					}
 				} return false;
 			});
 		}
