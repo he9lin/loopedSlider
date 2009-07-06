@@ -122,8 +122,10 @@
 				$(pagination,obj).parent().siblings().removeClass('active');
 				$(this).parent().addClass('active');
 				animate('fade',t);
-				if (o.restart) {autoStart();}
-				else {clearInterval(sliderIntervalID);}
+				if(o.autoStart){
+					if (o.restart) {autoStart();}
+					else {clearInterval(sliderIntervalID);}
+				}
 			} return false;
 		});
 	
