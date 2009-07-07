@@ -81,6 +81,10 @@
 		
 		$(o.slides,obj).children(':eq('+(s-1)+')').css({position:'absolute',left:-w});
 		
+		if (s>3) {
+			$(o.slides,obj).children(':eq('+(s-1)+')').css({position:'absolute',left:-w});
+		}
+		
 		if(o.autoHeight){autoHeight(t);}
 		
 		$('.next',obj).click(function(){
@@ -173,6 +177,10 @@
 					m = (-(t*w-w));
 					current(t);
 					if(o.autoHeight){autoHeight(t);}
+					if(s<3){
+						if (t===3){$(o.slides,obj).children(':eq(0)').css({left:(s*w)});}
+						if (t===2){$(o.slides,obj).children(':eq('+(s-1)+')').css({position:'absolute',left:(w)});}
+					}
 					$(o.slides,obj).animate({left: m}, o.slidespeed,function(){
 						if (t===s+1) {
 							t = 1;
@@ -190,6 +198,10 @@
 					m = (-(t*w-w));
 					current(t);
 					if(o.autoHeight){autoHeight(t);}
+					if (s<3){
+						if(t===0){$(o.slides,obj).children(':eq('+(s-1)+')').css({position:'absolute',left:(-w)});}
+						if(t===1){$(o.slides,obj).children(':eq(0)').css({position:'absolute',left:0});}
+					}
 					$(o.slides,obj).animate({left: m}, o.slidespeed,function(){
 						if (t===0) {
 							t = s;
