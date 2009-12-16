@@ -70,11 +70,11 @@ h2. Example Initialize + Options
 <pre>
 <script type="text/javascript" charset="utf-8">
         $(function(){
-                $('#loopedSlider').loopedSlider({
-					autoStart: 4000,
-					autoHeight: 500,
-					addPagination: true
-				});
+			$('#loopedSlider').loopedSlider({
+				autoStart: 4000,
+				autoHeight: 500,
+				addPagination: true
+			});
         });
 </script>
 </pre>
