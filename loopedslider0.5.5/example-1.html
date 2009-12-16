@@ -16,7 +16,7 @@
 		*/
 		.container { width:500px; height:375px; overflow:hidden; position:relative; cursor:pointer; }
 		.slides { position:absolute; top:0; left:0; }
-		.slides div { position:absolute; top:0; width:500px; display:none; }
+		.slides > div { position:absolute; top:0; width:500px; display:none; }
 		/*
 		 * Optional
 		*/
@@ -36,20 +36,24 @@
 			<div><img src="image-02.jpg" width="500" height="375" alt="Second Image" /></div>
 			<div><img src="image-03.jpg" width="500" height="375" alt="Third Image" /></div>
 			<div><img src="image-04.jpg" width="500" height="375" alt="Fourth Image" /></div>
+			<div><img src="image-01.jpg" width="500" height="375" alt="First Image" /></div>
+			<div><img src="image-02.jpg" width="500" height="375" alt="Second Image" /></div>
+			<div><img src="image-03.jpg" width="500" height="375" alt="Third Image" /></div>
+			<div><img src="image-04.jpg" width="500" height="375" alt="Fourth Image" /></div>
+			<div><img src="image-01.jpg" width="500" height="375" alt="First Image" /></div>
+			<div><img src="image-02.jpg" width="500" height="375" alt="Second Image" /></div>
+			<div><img src="image-03.jpg" width="500" height="375" alt="Third Image" /></div>
+			<div><img src="image-04.jpg" width="500" height="375" alt="Fourth Image" /></div>
 		</div>
 	</div>
 	<a href="#" class="previous">previous</a>
 	<a href="#" class="next">next</a>
-	<ul class="pagination">
-		<li><a href="#">1</a></li>
-		<li><a href="#">2</a></li>
-		<li><a href="#">3</a></li>
-		<li><a href="#">4</a></li>
-	</ul>	
 </div>
 <script type="text/javascript" charset="utf-8">
 	$(function(){
-		$('#loopedSlider').loopedSlider();
+		$('#loopedSlider').loopedSlider({
+			addPagination: true
+		});
 	});
 </script>
 </body>
