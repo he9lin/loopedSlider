@@ -1,4 +1,4 @@
-h1. loopedSlider 0.5.5 - jQuery plugin
+h1. loopedSlider 0.5.6 - jQuery plugin
 
 loopedSlider is a plugin made for jQuery that solves a simple problem, the looping of slide content. It was created to be easy to implement, smooth and most of all end the "content rewind" that most other content sliders suffer from.
 
@@ -50,7 +50,7 @@ h2. Initialize
 </script>
 </pre>
 
-h2. Options
+h2. Defaults
 
 <pre>
 container: ".container", //Class/id of main container. You can use "#container" for an id.
@@ -65,21 +65,32 @@ autoHeight: 0, //Set to positive number for true. This number will be the speed 
 addPagination: false //Add pagination links based on content? true/false
 </pre>
 
-h2. Example Initialize + Options
+h2. Defining Local Defaults
 
 <pre>
 <script type="text/javascript" charset="utf-8">
-	$(function(){
-		$('#loopedSlider').loopedSlider({
-			autoStart: 4000,
-			autoHeight: 500,
-			addPagination: true
-		});
-	});
+        $(function(){
+			$('#loopedSlider').loopedSlider({
+				addPagination: true,
+				slidespeed: 500
+			});
+        });
+</script>
+</pre>
+
+h2. Defining Global Defaults
+
+<pre>
+<script type="text/javascript" charset="utf-8">
+        $(function(){
+			$.fn.loopedSlider.defaults.addPagination = true;
+			$.fn.loopedSlider.defaults.slidespeed = 500;
+        });
 </script>
 </pre>
 
 h2. Changelog
+* 0.5.6 - Updated to jQuery 1.4. Defaults are now global.
 * 0.5.5 - Bug fixes, code clean up and added auto generated pagination feature for dynamic sites
 * 0.5.4 - Fixed bug if slider has less then 3 slides 
 * 0.5.3 - Minor bug fix related to auto restart
