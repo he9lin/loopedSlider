@@ -148,7 +148,8 @@ if(typeof jQuery != 'undefined') {
 						},o.autoStart);
 						function autoStart() {
 							if (o.restart) {
-							clearInterval(sliderIntervalID,interval);
+							clearInterval(sliderIntervalID);
+							clearInterval(interval);
 							clearTimeout(restart);
 								restart = setTimeout(function() {
 									interval = setInterval(	function(){
