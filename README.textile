@@ -6,6 +6,8 @@ h2. Info
 
 Developed by "Nathan Searles":mailto:nsearles@gmail.com, "http://nathansearles.com":http://nathansearles.com
 
+Complete instructions can be found at "http://nathansearles.com/plugin/loopedslider/":http://nathansearles.com/plugin/loopedslider/
+
 For updates, follow Nathan Searles on "Twitter":http://twitter.com/nathansearles
 
 h2. Examples
