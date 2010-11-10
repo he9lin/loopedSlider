@@ -12,10 +12,10 @@ For updates, follow Nathan Searles on "Twitter":http://twitter.com/nathansearles
 
 h2. Examples
 
-* "Simple example using images, DIVs and auto generated pagination":http://nathansearles.com/loopedslider/example-1.html
-* "Simple text and auto height example using LIs":http://nathansearles.com/loopedslider/example-2.html
-* "Multiple sliders and auto play with auto restart":http://nathansearles.com/loopedslider/example-3.html
-* "Styled example":http://nathansearles.com/loopedslider/example-4.html
+* "Simple example using images, DIVs and auto generated pagination":http://nathansearles.com/plugin/loopedslider/archive/example-1.html
+* "Simple text and auto height example using LIs":http://nathansearles.com/plugin/loopedslider/archive/example-2.html
+* "Multiple sliders and auto play with auto restart":http://nathansearles.com/plugin/loopedslider/archive/example-3.html
+* "Styled example":http://nathansearles.com/plugin/loopedslider/archive/example-4.html
 
 h2. Markup
 
