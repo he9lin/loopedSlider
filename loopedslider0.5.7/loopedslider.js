@@ -246,7 +246,12 @@ if(typeof jQuery != 'undefined') {
 									$(o.slides,$t).children(":eq(0)").css({left:0});
 									if(times===slides){$(o.slides,$t).children(":eq(0)").css({left:(slides*width)});}
 									if(times===1){$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});}
-									$(o.slides,$t).children().fadeIn(o.fadespeed);
+									$(o.slides,$t).children().fadeIn(o.fadespeed, function() {
+										//removing filter from IE
+										if(jQuery.browser.msie) {
+											$(this).get(0).style.removeAttribute('filter');
+										}
+									});
 									active = false;
 								});
 								break; 
