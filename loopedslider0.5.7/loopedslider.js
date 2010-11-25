@@ -104,7 +104,7 @@ if(typeof jQuery != 'undefined') {
 								else {clearInterval(sliderIntervalID);}
 							}
 						} return false;
-					});
+					}).disableSelection();
 
 					$(".previous",$t).click(function(){
 						if(active===false) {	
@@ -114,7 +114,7 @@ if(typeof jQuery != 'undefined') {
 								else {clearInterval(sliderIntervalID);}
 							}
 						} return false;
-					});
+					}).disableSelection();
 
 					if (o.containerClick) {
 						$(o.container,$t).click(function(){
