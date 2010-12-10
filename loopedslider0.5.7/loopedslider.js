@@ -78,6 +78,9 @@ if(typeof jQuery != 'undefined') {
 
 					if (slides===1) {
 						$(o.slides,$t).children().css({position:"absolute",left:position,display:"block"});
+						$(".previous",$t).hide();
+						$(".next",$t).hide();
+						$(pagination,$t).hide();
 						return;
 					}
 
@@ -140,7 +143,7 @@ if(typeof jQuery != 'undefined') {
 								else {clearInterval(sliderIntervalID);}
 							}
 						} return false;
-					});
+					}).disableSelection();
 
 					if (o.autoStart) {
 						sliderIntervalID = setInterval(function(){
